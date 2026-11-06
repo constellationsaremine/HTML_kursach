@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Премиальный автосалон «VIP»</title>
+
+    <!--    Подключение CSS части Bootstrap   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!--    Подключение CSS файла "style.css"   -->
+    <link rel="stylesheet" href="style/style.css">
+    </head>
+
+<body>
+
+    <!--    Header, navbar сайта    -->
+    <header class="bg-black py-3 border-bottom border-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="text-warning fs-2 logo  border border-warning px-2 text-decoration-none" href=" #">
+                VIP
+            </a>
+            <nav>
+                <a href="#catalog" class="text-white text-decoration-none me-4">
+                    Каталог
+                </a>
+                <a href="#credits" class="text-white text-decoration-none me-4">
+                    Кредит
+                </a>
+                <a href="#trade-in" class="text-white text-decoration-none me-4">
+                    Trade-in
+                </a>
+                <a href="#service" class="text-white text-decoration-none me-4">
+                    Сервис
+                </a>
+                
+            </nav>
+            <a href="#" class="btn btn-outline-warning">
+                Оставить заявку
+            </a>
+        </div>
+    </header>
+
+    <!--    Hero часть сайта    -->
+    <section class="hero py-5 text-center">
+        <div class="container">
+            <img src="img/img1.png" alt="background-car" class="img-fluid rounded text-center my-4">
+            
+            <h1 class="lead mb-5 text-secondary border border-secondary p-3 rounded text-center h-100" style="background-color: #1A1A1A;">
+                Автомобили премиум класса <br> <span class="text-warning">в наличии</span>
+            </h1>
+            
+            <h1 class="lead mb-5 text-secondary border border-secondary p-3 rounded text-center h-100" style="background-color: #1A1A1A;">
+                Более <br> <span class="text-warning">100</span> автомобилей с гарантией, возможностью <br> <span class="text-warning">Trade-in</span>
+            </h1>
+            
+            <h1 class="lead mb-5 text-secondary border border-secondary p-3 rounded text-center h-100" style="background-color: #1A1A1A;">
+                Официальная <br> <span class="text-warning">гаратния</span> и свой <br> <span class="text-warning">сервисный центр</span>
+            </h1>
+            
+            <div class="d-flex justify-content-center gap-3 my-4">
+                <button href="#catalog" class="btn btn-warning fw-bold text-white px-4 py-2">
+                    Смотреть Каталог
+                </button>
+                <button href="#credits" class="btn btn-outline-warning fw-bold text-white px-4 py-2">
+                    Рассчитать кредит
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!--    Каталог     -->
+    <main class="#catalog py-2 text-center">
+        <div class="container">
+                <h2>
+                    Автомобили в наличии
+                </h2>
+
+                <!--    Карточка №1     -->
+                <div class="card text-white" style="background-color: #1A1A1A;">
+                    <img src="img/img2.png" alt="Mercedez-Benz AMG GT I" class="card-img-top">
+                    <div class="card-body">
+                       <h5 class="card-title">Mercedez-Benz AMG GT I</h5>
+                       <p class="card-text">7.5 млн рублей</p>
+                       <p class="card-text"> 10т. км. пробега</p>
+                       <a href="#" class="btn btn-warning fw-bold text-white">Подробнее</a> 
+                    </div>
+                </div>
+                
+                <!--    Карточка №2     -->
+                <div class="card text-white" style="background-color: #1A1A1A;">
+                    <img src="img/img3.png" alt="Audi R8" class="card-img-top">
+                    <div class="card-body">
+                       <h5 class="card-title">Audi R8</h5>
+                       <p class="card-text">16 млн рублей</p>
+                       <p class="card-text"> 8т. км. пробега</p>
+                       <a href="#" class="btn btn-warning fw-bold text-white">Подробнее</a> 
+                    </div>
+                </div>
+
+                <!--    Карточка №3     -->
+                <div class="card text-white" style="background-color: #1A1A1A;">
+                    <img src="img/img4.png" alt="Bentley Continental GT" class="card-img-top">
+                    <div class="card-body">
+                       <h5 class="card-title">Bentley Continental GT</h5>
+                       <p class="card-text">7.5 млн рублей</p>
+                       <p class="card-text"> 10т. км. пробега</p>
+                       <a href="#" class="btn btn-warning fw-bold text-white">Подробнее</a> 
+                    </div>
+                </div>
+
+                <!--    Карточка №4     -->
+                <div class="card text-white" style="background-color: #1A1A1A;">
+                    <img src="img/img5.png" alt="Land Rover Range Rover (V поколение)" class="card-img-top">
+                    <div class="card-body">
+                       <h5 class="card-title">Land Rover Range Rover (V поколение)</h5>
+                       <p class="card-text">7.5 млн рублей</p>
+                       <p class="card-text"> 10т. км. пробега</p>
+                       <a href="#" class="btn btn-warning fw-bold text-white">Подробнее</a> 
+                    </div>
+                </div>
+
+                <p class="text-secondary">
+                    Посмотреть весь каталог...
+                </p>
+        </div>
+    </main>
+
+    <!--    Кредиты     -->
+    <main class="#credits">
+        <div class="container"></div>
+    </main>
+
+    <!--    Trade-in    -->
+    <main class="#trade-in"></main>
+    <!--    Сервис      -->
+    <main class="#service">
+
+    </main>
+
+    <!--    Подвал      -->
+    <footer>
+        <div class="container"></div>
+    </footer>
+    <!--    Подключение JS скриптов Bootstrap   -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
