@@ -387,11 +387,50 @@
         {
             //  Получение значений из полей:
             const price = parseFloat(priceInput.value) || 0;
+            const downPayment = parsefFloat(downPaymentInput.value) || 0;
+            const months = parseInt(termSelect.value) || 0;
+
+            //  Ставка 3.9% годовых.
+            
+            const annualRate = 0.039;
+
+            //  Реальная сумма кредита (Цена - Первоначальный Взнос)
+            
+            const loanAmount = price - downPayment;
+            
+            if (loanAmount <= 0 || price <= 0)
+            {
+                resultDisplay.innerText = '0 ₽ / мес.';
+                return;
+            }
+
+            //  Месячная процентная ставка (Годовая / 12 мес.)
+            const monthlyRate = annualRate / 12;
+
+            //  Формула аннуитетного платежа (стандартная банковская формула)
+            const monthlylPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (math.pow(1 + monthlyRate, months) - 1);
+
+            //  Форматирование числа (добавление проблеа между тысячами)
+            const formattedResult = Math.round(monthlylPayment).toLocaleString('ru-RU') + ' ₽ / мес.';
+
+            //  Вывод результата:
+
+            resultDisplay.innerText = formattedResult;
         }
+
+        //  3. Event Listeners
+            // Как только пользователь вводит символ/меняет срок - вызов функции расчёта.
+            priceInput.addEventListener('input', calculateLoan);
+            downPaymentInput.addEventListener('input', calculateLoan);
+            termSelect.addEventListener('change', calculateLoan);
+
+            //  Запуск расчёта один раз при загрузке страницы для прогрузки красивого вывода
+            
+            calculateLoan()
 
     </script>
 
-    <!--    Подключение JS скриптов Bootstrap   -->
+    <!--    Подключение JS скриптов Bootstrap   -->~~
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
