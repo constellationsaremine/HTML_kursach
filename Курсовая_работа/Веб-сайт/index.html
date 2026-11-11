@@ -9,10 +9,10 @@
     <!--    Подключение CSS части Bootstrap   -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
+
     <!--    Подключение CSS файла "style.css"   -->
     <link rel="stylesheet" href="style/style.css">
-    </head>
+</head>
 
 <body>
 
@@ -35,7 +35,7 @@
                 <a href="#service" class="text-white text-decoration-none me-4">
                     Сервис
                 </a>
-                
+
             </nav>
             <a href="#hero" class="btn btn-outline-warning">
                 Оставить заявку
@@ -46,30 +46,28 @@
     <!--    Hero часть сайта    -->
     <section id="hero" class="py-5 text-center">
         <div class="container">
-            <div class="p-4 rounded border border-warning" style="background-color: transparent;">
+            <div class="p-4 rounded border border-secondary" style="background-color: transparent;">
                 <div class="mb-4">
-                    <img src="img/img1.png"
-                         alt="VIP premium car"
-                         class="img-fluid rounded w-100"
-                         style="max-height: 420px; object-fit: cover;">
+                    <img src="img/img1.png" alt="VIP premium car" class="img-fluid rounded w-100"
+                        style="max-height: 420px; object-fit: cover;">
                 </div>
 
                 <div class="row g-3 mb-4">
 
                     <div class="col-md-4">
                         <div class="h-100 p-3 rounded border border-secondary text-center"
-                             style="background-color: rgba(26, 26, 26, 0.85);">
-                             <p class="mb-0 text-white">
+                            style="background-color: rgba(26, 26, 26, 0.85);">
+                            <p class="mb-0 text-white">
                                 Автомобили премиум класса
                                 <br>
                                 <span class="text-warning fw-semibold">в наличии</span>
-                             </p>
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4">
                         <div class="h-100 p-3 rounded border border-secondary text-center"
-                             style="background-color: rgba(26, 26, 26, 0.85);">
+                            style="background-color: rgba(26, 26, 26, 0.85);">
                             <p class="mb-0 text-white">
                                 Более <span class="text-warning fw-semibold">100</span>
                                 автомобилей<br>с гарантией и возможностью<br>
@@ -80,7 +78,7 @@
 
                     <div class="col-md-4">
                         <div class="h-100 p-3 rounded border border-secondary text-center"
-                             style="background-color: rgba(26, 26, 26, 0.85);">
+                            style="background-color: rgba(26, 26, 26, 0.85);">
                             <p class="mb-0 text-white">
                                 Официальная<br>
                                 <span class="text-warning fw-semibold">гарантия</span> и свой<br>
@@ -103,208 +101,206 @@
     </section>
 
     <!--    Каталог     -->
-    <section id="catalog" class="py-5">
-    <div class="container">
-        
-        <!-- Заголовок -->
-        <h2 class="text-center mb-4 text-white">
-            Автомобили в наличии
-        </h2>
+    <section id="catalog" class="py-5" style="overflow-x: hidden;">
+        <div class="container">
 
-        <!-- Фильтры -->
-        <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center mb-5">
-            <span class="text-secondary">
-                Фильтры
-            </span>
+            <!-- Заголовок -->
+            <h2 class="text-center mb-4 text-white">
+                Автомобили в наличии
+            </h2>
 
-            <select class="form-select bg-dark text-white w-auto" style="border-color: #c9a84c;">
-                <option>Марка: Все</option>
-                <option>Mercedes</option>
-                <option>Audi</option>
-                <option>Bentley</option>
-                <option>Land Rover</option>
-            </select>
+            <!-- Фильтры -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 p-2 px-3 mb-4 rounded"
+                style="background-color: #1a1a1a; border: 1 px solid rgba(201, 168, 76, 0.55)">
 
-            <select class="form-select bg-dark text-white w-auto" style="border-color: #c9a84c;">
-                <option>Год: Все</option>
-                <option>от 2020</option>
-                <option>от 2022</option>
-            </select>
+                <span class="text-white">
+                    Фильтры
+                </span>
 
-            <select class="form-select bg-dark text-white w-auto" style="border-color: #c9a84c;">
-                <option>Пробег: Все</option>
-                <option>до 10 000 км</option>
-                <option>до 30 000 км</option>
-            </select>
+                <div class="d-flex flex-wrap gap-2 align-items-center ms-auto">
+                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                        style="border-color: #c9a84c;">
+                        <option>Марка: Все</option>
+                        <option>Mercedes</option>
+                        <option>Audi</option>
+                        <option>Bentley</option>
+                        <option>Land Rover</option>
+                    </select>
 
-            <select class="form-select bg-dark text-white w-auto" style="border-color: #c9a84c;">
-                <option>Цена: Все</option>
-                <option>до 10 млн</option>
-                <option>до 20 млн</option>
-            </select>
+                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                        style="border-color: #c9a84c;">
+                        <option>Год: Все</option>
+                        <option>от 2020</option>
+                        <option>от 2022</option>
+                    </select>
 
-            <button class="btn btn-warning px-4 fw-bold">
-                Найти
-            </button>
-        </div>
+                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                        style="border-color: #c9a84c;">
+                        <option>Пробег: Все</option>
+                        <option>до 10 000 км</option>
+                        <option>до 30 000 км</option>
+                    </select>
 
-        <!-- СЕТКА КАРТОЧЕК (Один <div class="row"> держит все 4 карточки) -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                        style="border-color: #c9a84c;">
+                        <option>Цена: Все</option>
+                        <option>до 10 млн</option>
+                        <option>до 20 млн</option>
+                    </select>
 
-            <!-- Карточка 1: Mercedes -->
-            <div class="col">
-                <div class="card text-white h-100" style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
-                    <img src="img/img2.png" alt="Mercedes-Benz AMG GT I" class="card-img-top" style="height: 180px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column p-3">
-                        <h6 class="card-title mb-3" style="min-height: 40px;">
-                            Mercedes-Benz AMG GT I
-                        </h6>
-                        <div class="d-flex justify-content-between small mb-3">
-                            <span class="text-warning fw-semibold">
-                                7,5 млн. руб.
-                            </span>
-                            <span class="text-secondary">
-                                 10т. км. пробега
-                            </span>
-                        </div>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                            <span class="small"><span class="text-warning">●</span>
-                            В наличии
-                        </span>
-                            <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#CarModal"
-                                    data-title="Mercedez-Benz AMG GT I"
-                                    data-price="7,500,000 ₽"
-                                    data-img="img/img2.png"
-                                    data-year="2022"
-                                    data-mileage="10 000 км."
-                                    >
-                                Подробнее
-                            </button>
-                        </div>
-                    </div>
+                    <button class="btn btn-warning btn-sm px-4 fw-bold">
+                        Найти
+                    </button>
                 </div>
             </div>
 
-            <!-- Карточка 2: Audi R8 -->
-            <div class="col">
-                <div class="card text-white h-100" style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
-                    <img src="img/img3.png" alt="Audi R8" class="card-img-top" style="height: 180px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column p-3">
-                        <h6 class="card-title mb-3" style="min-height: 40px;">
-                            Audi R8
-                        </h6>
-                        <div class="d-flex justify-content-between small mb-3">
-                            <span class="text-warning fw-semibold">
-                                16 млн. руб.
-                            </span>
-                            <span class="text-secondary">
-                                 8т. км. пробега
-                            </span>
-                        </div>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                            <span class="small">
-                                <span class="text-warning">
-                                    ●
+
+            <!--    Карточки    -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+                <!-- Карточка 1: Mercedes -->
+                <div class="col">
+                    <div class="card text-white h-100"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
+                        <img src="img/img2.png" alt="Mercedes-Benz AMG GT I" class="card-img-top"
+                            style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-3">
+                            <h6 class="card-title mb-3" style="min-height: 40px;">
+                                Mercedes-Benz AMG GT I
+                            </h6>
+                            <div class="d-flex justify-content-between align-items-center small mb-3 w-100">
+                                <span class="text-warning fw-semibold">
+                                    7,5 млн. руб.
                                 </span>
-                                В наличии
-                            </span>
-                            <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#CarModal"
-                                    data-title="Audi R8"
-                                    data-price="16,000,000 ₽"
-                                    data-img="img/img3.png"
-                                    data-year="2021"
+                                <span class="text-secondary">
+                                    10т. км. пробега
+                                </span>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="small"><span class="text-warning">●</span>
+                                    В наличии
+                                </span>
+                                <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
+                                    data-bs-toggle="modal" data-bs-target="#CarModal"
+                                    data-title="Mercedez-Benz AMG GT I" data-price="7,500,000 ₽" data-img="img/img2.png"
+                                    data-year="2022" data-mileage="10 000 км.">
+                                    Подробнее
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Audi R8 -->
+                <div class="col">
+                    <div class="card text-white h-100"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
+                        <img src="img/img3.png" alt="Audi R8" class="card-img-top"
+                            style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-3">
+                            <h6 class="card-title mb-3" style="min-height: 40px;">
+                                Audi R8
+                            </h6>
+                            <div class="d-flex justify-content-between align-items-center small mb-3 w-100">
+                                <span class="text-warning fw-semibold">
+                                    16 млн. руб.
+                                </span>
+                                <span class="text-secondary">
+                                    8т. км. пробега
+                                </span>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="small">
+                                    <span class="text-warning">
+                                        ●
+                                    </span>
+                                    В наличии
+                                </span>
+                                <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
+                                    data-bs-toggle="modal" data-bs-target="#CarModal" data-title="Audi R8"
+                                    data-price="16,000,000 ₽" data-img="img/img3.png" data-year="2021"
                                     data-mileage="8 000 км.">
-                                Подробнее
-                            </button>
+                                    Подробнее
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Карточка 3: Bentley -->
-            <div class="col">
-                <div class="card text-white h-100" style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
-                    <img src="img/img4.png" alt="Bentley Continental GT" class="card-img-top" style="height: 180px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column p-3">
-                        <h6 class="card-title mb-3" style="min-height: 40px;">
-                            Bentley Continental GT
-                        </h6>
-                        <div class="d-flex justify-content-between small mb-3">
-                            <span class="text-warning fw-semibold">
-                                7,5 млн. руб.
-                            </span>
-                            <span class="text-secondary">
-                                 10т. км. пробега
-                            </span>
-                        </div>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                            <span class="small">
-                                <span class="text-warning">
-                                    ●
+                <!-- Карточка 3: Bentley -->
+                <div class="col">
+                    <div class="card text-white h-100"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
+                        <img src="img/img4.png" alt="Bentley Continental GT" class="card-img-top"
+                            style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-3">
+                            <h6 class="card-title mb-3" style="min-height: 40px;">
+                                Bentley Continental GT
+                            </h6>
+                            <div class="d-flex justify-content-between align-items-center small mb-3 w-100">
+                                <span class="text-warning fw-semibold">
+                                    7,5 млн. руб.
                                 </span>
-                                В наличии
-                            </span>
-
-                            <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#CarModal"
-                                    data-title="Bentley Continental GT"
-                                    data-price="7,500,000 ₽"
-                                    data-img="img/img4.png"
-                                    data-year="2022"
-                                    data-mileage="9 000 км.">
-                                Подробнее
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Карточка 4: Range Rover -->
-            <div class="col">
-                <div class="card text-white h-100" style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
-                    <img src="img/img5.png" alt="Land Rover Range Rover (V поколение)" class="card-img-top" style="height: 180px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column p-3">
-                        <h6 class="card-title mb-3" style="min-height: 40px;">
-                            Land Rover Range Rover (V поколение)
-                        </h6>
-                        <div class="d-flex justify-content-between small mb-3">
-                            <span class="text-warning fw-semibold">
-                                7,5 млн. руб.
-                            </span>
-                            <span class="text-secondary">
-                                 10т. км. пробега
-                            </span>
-                        </div>
-                        <div class="mt-auto d-flex justify-content-between align-items-center">
-                            <span class="small">
-                                <span class="text-warning">
-                                    ●
+                                <span class="text-secondary">
+                                    10т. км. пробега
                                 </span>
-                                В наличии
-                            </span>
-                            <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#CarModal"
-                                    data-title="Land Rover Range Rover (V поколение)"
-                                    data-price="7,500,000 ₽"
-                                    data-img="img/img5.png"
-                                    data-year="2021"
-                                    data-mileage="14 000 км."
-                                    >
-                                Подробнее
-                            </button>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="small">
+                                    <span class="text-warning">
+                                        ●
+                                    </span>
+                                    В наличии
+                                </span>
+
+                                <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
+                                    data-bs-toggle="modal" data-bs-target="#CarModal"
+                                    data-title="Bentley Continental GT" data-price="7,500,000 ₽" data-img="img/img4.png"
+                                    data-year="2022" data-mileage="9 000 км.">
+                                    Подробнее
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 4: Range Rover -->
+                <div class="col">
+                    <div class="card text-white h-100"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
+                        <img src="img/img5.png" alt="Land Rover Range Rover (V поколение)" class="card-img-top"
+                            style="height: 180px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-3">
+                            <h6 class="card-title mb-3" style="min-height: 40px;">
+                                Land Rover Range Rover (V поколение)
+                            </h6>
+                            <div class="d-flex justify-content-between align-items-center small mb-3 w-100">
+                                <span class="text-warning fw-semibold">
+                                    7,5 млн. руб.
+                                </span>
+                                <span class="text-secondary">
+                                    10т. км. пробега
+                                </span>
+                            </div>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="small">
+                                    <span class="text-warning">
+                                        ●
+                                    </span>
+                                    В наличии
+                                </span>
+                                <button class="btn btn-warning btn-sm fw-bold text-dark px-3 ms-5"
+                                    data-bs-toggle="modal" data-bs-target="#CarModal"
+                                    data-title="Land Rover Range Rover (V поколение)" data-price="7,500,000 ₽"
+                                    data-img="img/img5.png" data-year="2021" data-mileage="14 000 км.">
+                                    Подробнее
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div> <!-- Здесь закрывается <div class="row"> для всех карточек -->
-
+        </div>
         <!-- Ссылка под каталогом -->
         <div class="text-center mt-5">
             <a href="#" class="text-secondary text-decoration-none border-bottom border-warning pb-1">
@@ -312,13 +308,14 @@
             </a>
         </div>
 
-    </div>
+        </div>
     </section>
 
     <!--    Кредиты     -->
     <section id="credits" class="py-5">
-        <div class="container p-4 border border-warning rounded text-white text-center" style="background-color: #1A1A1A;">
-            
+        <div class="container p-4 border border-warning rounded text-white text-center"
+            style="background-color: #1A1A1A;">
+
 
             <!--    Заголовок блока     -->
             <h4 class="text-center text-white mb-1">
@@ -333,7 +330,7 @@
                         <h5 class="text-white">
                             Рассчитать кредит
                         </h5>
-                        
+
                         <p>
                             Ставка от 3.9%
                             <br>
@@ -343,36 +340,22 @@
                         <!--    1. Стоимость авто  -->
                         <div class="text-start mt-3">
                             <label for="credit-price" class="small text-secondary">
-                                Стоимость авто: 
+                                Стоимость авто:
                             </label>
-                            <input
-                                type="number"
-                                class="form-control bg-dark text-white border-warning"
-                                id="credit-price"
-                                name="price"
-                                min="0"
-                                step="0.01"
-                                placeholder="Например, 7500000"
-                                value="7500000"
-                            >
-                         </div>
+                            <input type="number" class="form-control bg-dark text-white border-warning"
+                                id="credit-price" name="price" min="0" step="0.01" placeholder="Например, 7500000"
+                                value="7500000">
+                        </div>
 
-                         <!-- 2. Первоначальный взнос -->
+                        <!-- 2. Первоначальный взнос -->
                         <div class="text-start mt-2">
                             <label for="down-payment" class="small text-secondary">
-                                Первоначальный взнос (₽): 
+                                Первоначальный взнос (₽):
                             </label>
-                            
-                            <input
-                                type="number"
-                                class="form-control bg-dark text-white border-warning"
-                                id="down-payment"
-                                name="price"
-                                min="0"
-                                step="0.01"
-                                placeholder="Например, 7500000"
-                                value="75000"
-                            >
+
+                            <input type="number" class="form-control bg-dark text-white border-warning"
+                                id="down-payment" name="price" min="0" step="0.01" placeholder="Например, 7500000"
+                                value="75000">
                         </div>
 
                         <!-- 3. Срок кредита -->
@@ -381,7 +364,7 @@
                                 Срок кредита:
                             </label>
 
-                            <select  id="credit-term" class="form-select bg-dark text-white border-warning">
+                            <select id="credit-term" class="form-select bg-dark text-white border-warning">
                                 <option value="12">12 Месяцев (1 год)</option>
                                 <option value="24">24 Месяца (2 года)</option>
                                 <option value="36">36 Месяцев (3 года)</option>
@@ -401,7 +384,7 @@
                 </div>
 
 
-                <!-- Trade-in -->    
+                <!-- Trade-in -->
                 <div class="col-md-6">
                     <div class="p-4 rounded border border-warning h-100" style="background-color: #1A1A1A;">
                         <h5 class="text-white">
@@ -410,75 +393,143 @@
                         <p class="text-white small">
                             Получите максимальную цену за ваш авто
                         </p>
-                        
-                        <div class="row g-3 mb-3">
-                            <!-- Марка  -->
-                            <div class="col-6 text-start">
-                                <label class="small text-secondary mb-1">
-                                    Марка авто
-                                </label>
-                                
-                                <input
-                                type="text"
-                                class="form-control bg-dark text-white border-secondary"
-                                placeholder="Например, BMW"
-                                >
+                        <form id="tradeInForm">
+                            <div class="row g-3 mb-3">
+                                <!-- Марка  -->
+                                <div class="col-6 text-start">
+                                    <label class="small text-secondary mb-1">
+                                        Марка авто
+                                    </label>
+
+                                    <input type="text" class="form-control bg-dark text-white border-secondary"
+                                        placeholder="Например, BMW" required>
+                                </div>
+
+                                <!-- Модель  -->
+                                <div class="col-6 text-start">
+                                    <label class="small text-secondary mb-1">
+                                        Модель
+                                    </label>
+
+                                    <input type="text" class="form-control bg-dark text-white border-secondary"
+                                        placeholder="Например, X5" required>
+                                </div>
                             </div>
 
-                            <!-- Модель  -->
-                            <div class="col-6 text-start">
-                                <label class="small text-secondary mb-1">
-                                    Модель
-                                </label>
+                            <div class="row g-3 mb-4">
+                                <!-- Год -->
+                                <div class="col-6 text-start">
+                                    <label class="small text-secondary mb-1">
+                                        Год выпуска
+                                    </label>
 
-                                <input 
-                                    type="text"
-                                    class="form-control bg-dark text-white border-secondary"
-                                    placeholder="Например, X5"
-                                >
-                            </div>
-                        </div>
+                                    <input type="number" class="form-control bg-dark text-white border-secondary"
+                                        placeholder="2021" required>
+                                </div>
 
-                        <div class="row g-3 mb-4">
-                            <!-- Год -->
-                            <div class="col-6 text-start">
-                                <label class="small text-secondary mb-1">
-                                    Год выпуска
-                                </label>
+                                <!-- Телефон -->
+                                <div class="col-6 text-start">
+                                    <!-- Акцент на номер телефона -->
+                                    <label class="small text-warning mb-1">
+                                        Номер телефона
+                                    </label>
 
-                                <input 
-                                type="number"
-                                class="form-control bg-dark text-white border-secondary"
-                                placeholder="2021"
-                                >
+                                    <input type="tel" class="form-control bg-dark text-white border-warning"
+                                        placeholder="+7 (999) 000-00-00" required>
+                                </div>
                             </div>
 
-                            <!-- Телефон -->
-                            <div class="col-6 text-start">
-                                <!-- Акцент на номер телефона -->
-                                 <label class="small text-warning mb-1">
-                                    Номер телефона
-                                 </label>
-                                 
-                                 <input 
-                                    type="tel"
-                                    class="form-control bg-dark text-white border-warning"
-                                    placeholder="+7 (999) 000-00-00"
-                                 >
-                            </div>
-                        </div>
-
-                       <button id="tradeInBtn" type="button" class="btn btn-warning w-100 fw-bold text-dark mt-2">
-                            Оценить авто
-                       </button>
+                            <button id="tradeInBtn" type="submit" class="btn btn-warning w-100 fw-bold text-dark mt-2">
+                                Оценить авто
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
+    </section>
+
+    <!--    Сервис      -->
+    <section id="service" class="py-5"
+        style="background-color: #0D0D0D; border-top: 1px solid rgba(201, 168, 76, 0.2);">
+        <div class="container">
+
+            <!-- Заголовок -->
+            <div class="text-center mb-5">
+                <h2 class="text-white fw-bold">Сервис и Гарантия</h2>
+                <p class="text-warning small text-uppercase" style="letter-spacing: 2px;">
+                    Премиальное обслуживание вашего авто
+                </p>
+            </div>
+
+            <!-- 4 Плитки преимуществ -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+
+                <div class="col">
+                    <div class="card h-100 p-4 text-white"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.3); border-radius: 12px;">
+                        <div class="mb-3 fs-3">🛡️</div>
+                        <h5 class="fw-bold text-warning mb-2">Гарантия 2 года</h5>
+                        <p class="text-secondary small mb-0">
+                            Официальная гарантия дилера на все узлы и агрегаты купленных авто.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 p-4 text-white"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.3); border-radius: 12px;">
+                        <div class="mb-3 fs-3">🔧</div>
+                        <h5 class="fw-bold text-warning mb-2">150 пунктов проверки</h5>
+                        <p class="text-secondary small mb-0">
+                            Комплексная компьютерная и инспекционная диагностика перед продажей.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 p-4 text-white"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.3); border-radius: 12px;">
+                        <div class="mb-3 fs-3">📦</div>
+                        <h5 class="fw-bold text-warning mb-2">Родные запчасти</h5>
+                        <p class="text-secondary small mb-0">
+                            Используем только оригинальные комплектующие и спец-жидкости.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 p-4 text-white"
+                        style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.3); border-radius: 12px;">
+                        <div class="mb-3 fs-3">💎</div>
+                        <h5 class="fw-bold text-warning mb-2">VIP-Детейлинг</h5>
+                        <p class="text-secondary small mb-0">
+                            Защитные керамические покрытия, оклейка пленкой и уход за салоном.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Баннер записи на сервис -->
+            <div class="p-4 p-md-5 rounded-3" style="background-color: #1A1A1A; border: 1px solid #C9A84C;">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-3 mb-lg-0">
+                        <h4 class="text-white fw-bold mb-2">Нужно пройти техническое обслуживание?</h4>
+                        <p class="text-secondary mb-0">
+                            Оставьте заявку, и наш сервисный консультант свяжется с вами для согласования времени.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <button class="btn btn-warning px-4 py-2 fw-bold text-dark" data-bs-toggle="modal"
+                            data-bs-target="#serviceModal">
+                            Записаться на ТО
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-    <!--    Сервис      -->
-    <main id="service" class="">
-
-    </main>
 
     <!--    Подвал      -->
     <footer class="py-4 border-top border-warning mt-5" style="background-color: #0a0a0a;">
@@ -501,11 +552,11 @@
                         <a href="#catalog" class="text-secondary text-decoration-none small hover-warning">
                             Каталог
                         </a>
-                        
+
                         <a href="#credits" class="text-secondary text-decoration-none small hover-warning">
                             Кредит
                         </a>
-                        
+
                         <a href="#credits" class="text-secondary text-decoration-none small hover-warning">
                             Trade-in
                         </a>
@@ -517,49 +568,58 @@
                 </div>
 
                 <!-- Контакты -->
-                 <div class="col-md-4 text-center text-md-end text-white small">
+                <div class="col-md-4 text-center text-md-end text-white small">
                     <span class="text-warning fw-bold fs-6">+7 (999) 999-99-99</span><br>
                     <span class="text-secondary">г. Москва, Премиальная ул., 1</span>
-                 </div>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Модальное окно "Подробности авто" -->
-
     <div class="modal fade" id="CarModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-dark text-white border border-warning">
-                
+
                 <div class="modal-header border-secondary">
                     <h5 id="modalTitle" class="modal-title text-warning fw-bold">Mercedez-Benz AMG GT I</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <img id="modalImg" src="img/img2.png" alt="Car" class="img-fluid rounded border border-secondary">
-                        </div>
+
+                    <div class="mb-4">
+                        <img id="modalImg" src="img/img2.png" alt="Car" class="w-100 rounded border border-secondary"
+                            style="max-height: 380px; object-fit: cover;">
                     </div>
-                    <div class="col-md-6">
+
+                    <div>
                         <h4 id="modalPrice" class="text-warning">7,500,00 ₽</h4>
                         <p class="text-secondary small">Состояние: Идеальное (Проверено по 150-ти пунктам)</p>
 
                         <ul class="list-group list-group-flush bg-transparent mb-3">
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0"><strong>Год выпуска:</strong> <span id="modalYear">2022</span></li>
-                            <li  class="list-group-item bg-transparent text-white border-secondary px-0"><strong>Пробег:</strong> <span id="modalMileage">10 000 км.</span></li>
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0"><strong>Двигатель:</strong> 4.0 Л / 530 Л. С / Бензин</li>
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0"><strong>Привод:</strong> Задний.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0"><strong>Год
+                                    выпуска:</strong> <span id="modalYear">2022</span></li>
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0">
+                                <strong>Пробег:</strong> <span id="modalMileage">10 000 км.</span>
+                            </li>
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0">
+                                <strong>Двигатель:</strong> 4.0 Л / 530 Л. С / Бензин
+                            </li>
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0">
+                                <strong>Привод:</strong> Задний.
+                            </li>
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="modal-footer border-secondary justify-content-between">
                     <span class="text-success small">
                         ● Доступен для тест-драйва
                     </span>
-                    <button class="btn btn-warning fw-bold text-dark" onclick="alert('Заявка на бронирование автомобиля отправлена! Менеджер свяжется с вами в течение 30 минут.')">
+                    <button class="btn btn-warning fw-bold text-dark"
+                        onclick="alert('Заявка на бронирование автомобиля отправлена! Менеджер свяжется с вами в течение 30 минут.')">
                         Забронировать авто
                     </button>
                 </div>
@@ -567,11 +627,76 @@
         </div>
     </div>
 
-    <!-- JS-скрипт для подсчёта стоимости кредита: -->
+    <!-- Модальное окно "Запись на ТО" -->
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-white" style="background-color: #1A1A1A; border: 1px solid #C9A84C;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-warning">Запись на сервис</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="serviceForm">
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">Ваше имя</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary"
+                                placeholder="Иван" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">Телефон</label>
+                            <input type="tel" class="form-control bg-dark text-white border-secondary"
+                                placeholder="+7 (999) 000-00-00" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-secondary">Марка / Модель авто</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary"
+                                placeholder="Mercedes AMG GT" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold text-dark mt-2">
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Модальное окноы "успех Trade-in" -->
+    <div class="modal fade" id="tradeInModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-white" style="background-color: #1A1A1A; border: 1px solid #C9A84C;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-warning">Заявка на Trade-in принята</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="fs-1 mb-3">🚗🤝🏎️</div>
+                    <h5 class="fw-bold text-white mb-2">Предварительная оценка отправлена!</h5>
+                    <p class="text-secondary small mb-0">
+                        Наш специалист изучит характеристики вашего авто и перезвонит с лучшим предложением по выкупу в
+                        течение 30 минут.
+                    </p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-warning w-100 fw-bold text-dark" data-bs-dismiss="modal">
+                        Отлично
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Подключение JS скриптов Bootstrap   -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+
+    <!-- JS-скрипт для подсчёта стоимости кредита: -->
     <script>
         //  1. Нахождение эл. на стр. по ID:
-        
+
         const priceInput = document.getElementById('credit-price');
         const downPaymentInput = document.getElementById('down-payment');
         const termSelect = document.getElementById('credit-term');
@@ -579,23 +704,21 @@
 
         //  2. Фнукиця расчёта кредита:
 
-        function calculateLoan()
-        {
+        function calculateLoan() {
             //  Получение значений из полей:
             const price = parseFloat(priceInput.value) || 0;
             const downPayment = parseFloat(downPaymentInput.value) || 0;
             const months = parseInt(termSelect.value) || 0;
 
             //  Ставка 3.9% годовых.
-            
+
             const annualRate = 0.039;
 
             //  Реальная сумма кредита (Цена - Первоначальный Взнос)
-            
+
             const loanAmount = price - downPayment;
-            
-            if (loanAmount <= 0 || price <= 0)
-            {
+
+            if (loanAmount <= 0 || price <= 0) {
                 resultDisplay.innerText = '0 ₽ / мес.';
                 return;
             }
@@ -615,61 +738,81 @@
         }
 
         //  3. Event Listeners
-            // Как только пользователь вводит символ/меняет срок - вызов функции расчёта.
-            priceInput.addEventListener('input', calculateLoan);
-            downPaymentInput.addEventListener('input', calculateLoan);
-            termSelect.addEventListener('change', calculateLoan);
+        // Как только пользователь вводит символ/меняет срок - вызов функции расчёта.
+        priceInput.addEventListener('input', calculateLoan);
+        downPaymentInput.addEventListener('input', calculateLoan);
+        termSelect.addEventListener('change', calculateLoan);
 
-            //  Запуск расчёта один раз при загрузке страницы для прогрузки красивого вывода
-            
-            calculateLoan()
+        //  Запуск расчёта один раз при загрузке страницы для прогрузки красивого вывода
+
+        calculateLoan()
 
     </script>
 
+    <!-- Подстановка данных для модального окна -->
     <script>
         const carModal = document.getElementById("CarModal");
 
-        if (carModal)
-            {
-                carModal.addEventListener
-                ('show.bs.modal', function (event)
-                    {
-                        const button = event.relatedTarget;
+        if (carModal) {
+            carModal.addEventListener
+                ('show.bs.modal', function (event) {
+                    const button = event.relatedTarget;
 
-                        const title = button.getAttribute('data-title');
-                        const price = button.getAttribute('data-price');
-                        const img = button.getAttribute('data-img');
-                        const year = button.getAttribute('data-year');
-                        const mileage = button.getAttribute('data-mileage');
+                    const title = button.getAttribute('data-title');
+                    const price = button.getAttribute('data-price');
+                    const img = button.getAttribute('data-img');
+                    const year = button.getAttribute('data-year');
+                    const mileage = button.getAttribute('data-mileage');
 
-                        document.getElementById('modalTitle').innerText = title;
-                        document.getElementById('modalPrice').innerText = price;
-                        document.getElementById('modalImg').src = img;
-                        document.getElementById('modalYear').innerText = year;
-                        document.getElementById('modalMileage').innerText = mileage;
-                    }
+                    document.getElementById('modalTitle').innerText = title;
+                    document.getElementById('modalPrice').innerText = price;
+                    document.getElementById('modalImg').src = img;
+                    document.getElementById('modalYear').innerText = year;
+                    document.getElementById('modalMileage').innerText = mileage;
+                }
                 );
-            }
+        }
     </script>
 
     <!-- Обработка кнопки Trade-in -->
     <script>
-        const tradeInBtn = document.getElementById('tradeInBtn');
+        document.addEventListener('DOMContentLoaded', function () {
+            const tradeInForm = document.getElementById('tradeInForm');
+            if (tradeInForm) {
+                tradeInForm.addEventListener('submit', function (e) {
+                    e.preventDefault(); // Запрещаем перезагрузку страницы
 
-        if (tradeInBtn)
-        {
-            tradeInBtn.addEventListener('click', function()
-                {
-                    alert('Ваша заявка на оценку Trade-in №' + Math.floor(Math.random() * 9000 + 1000) + ' принята!\n\n Наш специалист позвонит вам в течении часа.');
-                }
-            );
-        }
+                    // 1. Открываем красивую модалку успеха
+                    const tradeModalElem = document.getElementById('tradeInModal');
+                    const tradeModal = bootstrap.Modal.getOrCreateInstance(tradeModalElem);
+                    tradeModal.show();
+
+                    // 2. Очищаем форму
+                    this.reset();
+                });
+            }
+        });
     </script>
 
-    <!--    Подключение JS скриптов Bootstrap   -->~~
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <!-- Скрипт автообработки формы записи -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceForm = document.getElementById('serviceForm');
+            if (serviceForm) {
+                serviceForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Спасибо! Ваша заявка на сервис принята. Менеджер свяжется с вами в течение 15 минут.');
+
+                    const modalElement = document.getElementById('serviceModal');
+                    const modal = bootstrap.Modal.getInstance(modalElement);
+                    if (modal) modal.hide();
+
+                    this.reset();
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>
