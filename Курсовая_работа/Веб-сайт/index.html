@@ -118,37 +118,37 @@
                 </span>
 
                 <div class="d-flex flex-wrap gap-2 align-items-center ms-auto">
-                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                    <select id="filterBrand" class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
                         style="border-color: #c9a84c;">
-                        <option>Марка: Все</option>
-                        <option>Mercedes</option>
-                        <option>Audi</option>
-                        <option>Bentley</option>
-                        <option>Land Rover</option>
+                        <option value="all">Марка: Все</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="bentley">Bentley</option>
+                        <option value="range_rover">Land Rover</option>
                     </select>
 
-                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                    <select id="filterYear" class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
                         style="border-color: #c9a84c;">
-                        <option>Год: Все</option>
-                        <option>от 2020</option>
-                        <option>от 2022</option>
+                        <option value="all">Год: Все</option>
+                        <option value="2020">от 2020</option>
+                        <option value="2022">от 2022</option>
                     </select>
 
-                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                    <select id="filterMileage" class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
                         style="border-color: #c9a84c;">
-                        <option>Пробег: Все</option>
-                        <option>до 10 000 км</option>
-                        <option>до 30 000 км</option>
+                        <option value="all">Пробег: Все</option>
+                        <option value="10000">до 10 000 км</option>
+                        <option value="30000">до 30 000 км</option>
                     </select>
 
-                    <select class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
+                    <select id="filterPrice" class="form-select form-select-sm bg-dark text-white w-auto shadow-none"
                         style="border-color: #c9a84c;">
-                        <option>Цена: Все</option>
-                        <option>до 10 млн</option>
-                        <option>до 20 млн</option>
+                        <option value="all">Цена: Все</option>
+                        <option value="10000000">до 10 млн</option>
+                        <option value="20000000">до 20 млн</option>
                     </select>
 
-                    <button class="btn btn-warning btn-sm px-4 fw-bold">
+                    <button id="btnFilter" class="btn btn-warning btn-sm px-4 fw-bold">
                         Найти
                     </button>
                 </div>
@@ -159,7 +159,8 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
                 <!-- Карточка 1: Mercedes -->
-                <div class="col">
+                <div class="col car-card" data-brand="mercedes" data-year="2022" data-mileage="10000"
+                    data-price="7500000">
                     <div class="card text-white h-100"
                         style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
                         <img src="img/img2.png" alt="Mercedes-Benz AMG GT I" class="card-img-top"
@@ -192,7 +193,7 @@
                 </div>
 
                 <!-- Карточка 2: Audi R8 -->
-                <div class="col">
+                <div class="col car-card" data-brand="audi" data-year="2021" data-mileage="8000" data-price="16000000">
                     <div class="card text-white h-100"
                         style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
                         <img src="img/img3.png" alt="Audi R8" class="card-img-top"
@@ -228,7 +229,8 @@
                 </div>
 
                 <!-- Карточка 3: Bentley -->
-                <div class="col">
+                <div class="col car-card" data-brand="bentley" data-year="2022" data-mileage="9000"
+                    data-price="7500000">
                     <div class="card text-white h-100"
                         style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
                         <img src="img/img4.png" alt="Bentley Continental GT" class="card-img-top"
@@ -265,7 +267,8 @@
                 </div>
 
                 <!-- Карточка 4: Range Rover -->
-                <div class="col">
+                <div class="col car-card" data-brand="range_rover" data-year="2021" data-mileage="14000"
+                    data-price="7500000">
                     <div class="card text-white h-100"
                         style="background-color: #1A1A1A; border: 1px solid rgba(201, 168, 76, 0.55); border-radius: 12px; overflow: hidden;">
                         <img src="img/img5.png" alt="Land Rover Range Rover (V поколение)" class="card-img-top"
@@ -670,7 +673,6 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center py-4">
-                    <div class="fs-1 mb-3">🚗🤝🏎️</div>
                     <h5 class="fw-bold text-white mb-2">Предварительная оценка отправлена!</h5>
                     <p class="text-secondary small mb-0">
                         Наш специалист изучит характеристики вашего авто и перезвонит с лучшим предложением по выкупу в
@@ -808,6 +810,49 @@
                     this.reset();
                 });
             }
+        });
+    </script>
+
+    <!-- Скрипт фильтрации каталога -->
+    <script>
+        document.getElementById('btnFilter').addEventListener('click', function (e) {
+            e.preventDefault(); // Защита от случайной перезагрузки страницы
+
+            // 1. Получаем значения из фильтров
+            const selectedBrand = document.getElementById('filterBrand').value;
+            const selectedYear = document.getElementById('filterYear').value;
+            const selectedMileage = document.getElementById('filterMileage').value;
+            const selectedPrice = document.getElementById('filterPrice').value;
+
+            // 2. Находим ВСЕ карточки машин
+            const cards = document.querySelectorAll('.car-card');
+
+            // 3. Проверяем каждую машину
+            cards.forEach(card => {
+                const cardBrand = card.getAttribute('data-brand');
+                const cardYear = Number(card.getAttribute('data-year')) || 0;
+                const cardMileage = Number(card.getAttribute('data-mileage')) || 0;
+                const cardPrice = Number(card.getAttribute('data-price')) || 0;
+
+                // Проверка марки
+                const matchBrand = (selectedBrand === 'all' || cardBrand === selectedBrand);
+
+                // Проверка года (если выбрано "all", условие сразу true)
+                const matchYear = (selectedYear === 'all' || cardYear >= Number(selectedYear));
+
+                // Проверка пробега
+                const matchMileage = (selectedMileage === 'all' || cardMileage <= Number(selectedMileage));
+
+                // Проверка цены
+                const matchPrice = (selectedPrice === 'all' || cardPrice <= Number(selectedPrice));
+
+                // ИТОГ: если по всем 4 пунктам совпало — показываем, если нет — прячем
+                if (matchBrand && matchYear && matchMileage && matchPrice) {
+                    card.classList.remove('d-none'); // Показываем в Bootstrap
+                } else {
+                    card.classList.add('d-none');    // Прячем в Bootstrap
+                }
+            });
         });
     </script>
 
