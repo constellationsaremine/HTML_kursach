@@ -37,9 +37,44 @@
                 </a>
 
             </nav>
-            <a href="#hero" class="btn btn-outline-warning">
-                Оставить заявку
-            </a>
+            <div class="dropdown">
+                <button class="btn btn-warning dropdown-toggle fw-bold text-dark px-3" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Оставить заявку
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow"
+                    style="background-color: #1A1A1A; border: 1px solid #C9A84C; border-radius: 8px">
+
+                    <li>
+                        <a class="dropdown-item text-white py-2" href="#" data-bs-toggle="modal"
+                            data-bs-target="#serviceModal">
+                            Запись на сервис (ТО)
+                        </a>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider border-secondary my-1">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item text-white py-2" href="#credits">
+                            Оценка по Trade-in
+                        </a>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider border-secondary my-1">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item text-white py-2" href="#credits">
+                            Заявка на автокредит
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
     </header>
 
