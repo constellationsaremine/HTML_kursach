@@ -7,3 +7,14 @@ body {
     min-height: 100vh;
     max-height: 1000vh;
 }
+
+.btn-warning {
+    border-color: #C9A84C !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn-warning:hover {
+    background-color: #e0be5d !important;
+    box-shadow: 0 0 15px rgba(201, 168, 76, 0.75), 0 0 30px rgba(201, 168, 76, 0.3) !important;
+    transform: translateY(-2px);
+}
