@@ -19,7 +19,7 @@
     <!--    Header, navbar сайта    -->
     <header class="bg-black py-3 border-bottom border-dark">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="text-warning fs-2 logo  border border-warning px-2 text-decoration-none" href=" #">
+            <a class="text-warning fs-2 border border-warning px-2 text-decoration-none" href=" #">
                 VIP
             </a>
             <nav>
@@ -585,7 +585,7 @@
                         aria-label="Close"></button>
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body text-start">
 
                     <div class="mb-4">
                         <img id="modalImg" src="img/img2.png" alt="Car" class="w-100 rounded border border-secondary"
@@ -593,19 +593,19 @@
                     </div>
 
                     <div>
-                        <h4 id="modalPrice" class="text-warning">7,500,00 ₽</h4>
-                        <p class="text-secondary small">Состояние: Идеальное (Проверено по 150-ти пунктам)</p>
+                        <h4 id="modalPrice" class="text-warning mb-1">7,500,00 ₽</h4>
+                        <p class="text-secondary small mb-3">Состояние: Идеальное (Проверено по 150-ти пунктам)</p>
 
                         <ul class="list-group list-group-flush bg-transparent mb-3">
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0"><strong>Год
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between"><strong>Год
                                     выпуска:</strong> <span id="modalYear">2022</span></li>
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0">
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between">
                                 <strong>Пробег:</strong> <span id="modalMileage">10 000 км.</span>
                             </li>
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0">
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between">
                                 <strong>Двигатель:</strong> 4.0 Л / 530 Л. С / Бензин
                             </li>
-                            <li class="list-group-item bg-transparent text-white border-secondary px-0">
+                            <li class="list-group-item bg-transparent text-white border-secondary px-0 d-flex justify-content-between">
                                 <strong>Привод:</strong> Задний.
                             </li>
                         </ul>
@@ -670,7 +670,7 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center py-4">
-                    <div class="fs-1 mb-3">🚗🤝🏎️</div>
+                    <div class="fs-1 mb-3"></div>
                     <h5 class="fw-bold text-white mb-2">Предварительная оценка отправлена!</h5>
                     <p class="text-secondary small mb-0">
                         Наш специалист изучит характеристики вашего авто и перезвонит с лучшим предложением по выкупу в
@@ -712,7 +712,7 @@
 
             const annualRate = 0.039;
 
-            //  Реальная сумма кредита (Цена - Первоначальный Взнос)
+            //  Реальная сумма кредита
 
             const loanAmount = price - downPayment;
 
@@ -724,7 +724,7 @@
             //  Месячная процентная ставка (Годовая / 12 мес.)
             const monthlyRate = annualRate / 12;
 
-            //  Формула аннуитетного платежа (стандартная банковская формула)
+            //  Формула платежа (стандартная банковская формула)
             const monthlylPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
 
             //  Форматирование числа (добавление проблеа между тысячами)
